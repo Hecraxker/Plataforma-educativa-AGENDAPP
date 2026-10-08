@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgendApp Escolar · Cuaderno de misión</title>
+<meta name="description" content="Ruta de aprendizaje: reconoce la tarea, usa el RED, desarrolla, entrega evidencia, recibe retroalimentación y cierra.">
+<link rel="stylesheet" href="style.css"></head><body>
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+<div class="app">
+<header class="topbar"><div class="topbar__brand"><span class="topbar__mark" aria-hidden="true">🎒</span><div>
+<p class="topbar__eyebrow">AgendApp Escolar · RED-89-S-19</p><h1 class="topbar__title">Mi ruta de aprendizaje: aprendo a probar software</h1></div></div>
+<div class="topbar__status" id="progressStatus" aria-live="polite"></div></header>
+<div class="layout"><nav class="stepper" aria-label="Etapas de la ruta"><ol><li data-step="1"><button class="stepper__btn" data-goto="1"><span class="stepper__num">1</span><span class="stepper__label">Reconoce</span></button></li><li data-step="2"><button class="stepper__btn" data-goto="2"><span class="stepper__num">2</span><span class="stepper__label">Usa el RED</span></button></li><li data-step="3"><button class="stepper__btn" data-goto="3"><span class="stepper__num">3</span><span class="stepper__label">Desarrolla</span></button></li><li data-step="4"><button class="stepper__btn" data-goto="4"><span class="stepper__num">4</span><span class="stepper__label">Entrega</span></button></li><li data-step="5"><button class="stepper__btn" data-goto="5"><span class="stepper__num">5</span><span class="stepper__label">Retroalimentación</span></button></li><li data-step="6"><button class="stepper__btn" data-goto="6"><span class="stepper__num">6</span><span class="stepper__label">Cierra</span></button></li></ol><button class="stepper__reset" id="resetBtn" type="button">↺ Reiniciar mi ruta</button></nav>
+<main id="main" class="screen-wrap">
+<section id="step-1" class="screen" aria-labelledby="t1"><h2 id="t1">Etapa 1 · Reconoce qué debes hacer</h2><div class="ticket"><p class="ticket__from">Mesa de ayuda del colegio → <strong>Tu equipo de revisión</strong></p>
+<p class="ticket__msg">"AgendApp se está portando raro otra vez. Varios cursos reportaron reservas de espacios que no cuadran. ¿Nos ayudas a entender qué pasa?"</p></div>
+<p>AgendApp es la app con la que el colegio reserva la <strong>Sala de Cómputo</strong>, la <strong>Cancha</strong> y el <strong>Laboratorio</strong>. No necesitas saber programar: equivocarte hace parte del aprendizaje.</p>
+<h3>🎯 Tu misión</h3><p>Reproducir tres fallas reportadas, explicar su causa probable y entregar un <strong>informe de pruebas</strong> como evidencia. Al terminar serás capaz de explicar qué es un caso de prueba, reconocer tres tipos de falla y comparar lo esperado con lo obtenido.</p>
+<h3>🗺️ Tu ruta (30 a 40 minutos)</h3><ol class="cycle cycle--6"><li><span class="cycle__num">1</span><strong>Reconoce</strong><p>Entiendes tu misión y cómo se evalúa.</p></li><li><span class="cycle__num">2</span><strong>Usa el RED</strong><p>Lees los reportes, ves un ejemplo y verificas.</p></li><li><span class="cycle__num">3</span><strong>Desarrolla</strong><p>Practicas tres casos de prueba.</p></li><li><span class="cycle__num">4</span><strong>Entrega</strong><p>Redactas tu informe y lo entregas en PDF.</p></li><li><span class="cycle__num">5</span><strong>Retroalimentación</strong><p>Comparas tu trabajo y compruebas conceptos.</p></li><li><span class="cycle__num">6</span><strong>Cierra</strong><p>Te autoevalúas y descargas tu constancia.</p></li></ol><h3>📏 Cómo se evalúa</h3><table class="example-table"><tbody>
+<tr><th scope="row">Reproducir fallas</th><td>Lograste que AgendApp mostrara cada falla del reporte.</td></tr>
+<tr><th scope="row">Identificar el tipo</th><td>Clasificaste bien cada falla (entrada, cálculo o navegación).</td></tr>
+<tr><th scope="row">Explicar la causa</th><td>Tu explicación se acerca a la causa esperada.</td></tr>
+<tr><th scope="row">Comprender conceptos</th><td>Respondes bien las preguntas de comprobación.</td></tr></tbody></table>
+<label class="check"><input type="checkbox" data-path="ack"> Entiendo mi misión, lo que debo entregar y cómo se evalúa.</label>
+<p class="fine-print">Tu avance se guarda solo en este navegador. Debajo verás siempre qué falta para avanzar.</p><button class="btn btn--primary" data-goto="2">Empezar →</button></section>
+<section id="step-2" class="screen" aria-labelledby="t2"><h2 id="t2">Etapa 2 · Usa el RED</h2><div class="callout"><p><strong>🎯 Aquí:</strong> usas los recursos del RED para entender el problema antes de practicar. Cada recurso tiene un propósito.</p></div><table class="example-table"><tbody>
+<tr><th scope="row">Reportes</th><td>Entender qué vivió cada usuario antes de probar.</td></tr>
+<tr><th scope="row">Ejemplo resuelto</th><td>Ver un modelo de caso de prueba completo.</td></tr>
+<tr><th scope="row">Glosario</th><td>Aclarar el vocabulario cuando lo necesites.</td></tr>
+<tr><th scope="row">Simulador (Etapa 3)</th><td>Practicar y comparar lo esperado con lo obtenido.</td></tr></tbody></table><h3>Reportes de los usuarios</h3><p>Abre los tres.</p><details class="report">
+          <summary><span class="report__tag">Reporte 1</span> Error de entrada</summary>
+          <div class="report__body">
+            <p class="report__quote">"Reservé la Sala de Cómputo para mi curso pero no puse la hora de salida porque no la sabía todavía. AgendApp la guardó igual, ahora aparece una reserva con hora de fin en blanco y nadie sabe hasta cuándo dura."</p>
+            <p class="report__meta">Reportado por: Docente de Tecnología · Grado 9.º</p>
+            <div class="mock" aria-hidden="true">
+              <div class="mock__bar"><span></span><span></span><span></span><p>agendapp.escuela.edu.co/reservar</p></div>
+              <div class="mock__body">
+                <label class="mock__field">Sala <span>Sala de Cómputo</span></label>
+                <label class="mock__field">Hora inicio <span>13:00</span></label>
+                <label class="mock__field mock__field--bad">Hora fin <span>— vacío —</span></label>
+                <div class="mock__btn">Reserva confirmada ✔</div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="report">
+          <summary><span class="report__tag">Reporte 2</span> Error de cálculo</summary>
+          <div class="report__body">
+            <p class="report__quote">"Quise reservar la Cancha a la misma hora en que la Sala de Cómputo ya estaba ocupada por otro curso. AgendApp me rechazó la reserva diciendo que había un cruce de horario — ¡pero son espacios completamente distintos!"</p>
+            <p class="report__meta">Reportado por: Estudiante · Grado 8.º</p>
+            <div class="mock" aria-hidden="true">
+              <div class="mock__bar"><span></span><span></span><span></span><p>agendapp.escuela.edu.co/reservar</p></div>
+              <div class="mock__body">
+                <label class="mock__field">Sala <span>Cancha</span></label>
+                <label class="mock__field">Hora inicio <span>08:00</span></label>
+                <label class="mock__field">Hora fin <span>09:00</span></label>
+                <div class="mock__btn mock__btn--bad">✘ Cruce de horario detectado</div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="report">
+          <summary><span class="report__tag">Reporte 3</span> Error de navegación</summary>
+          <div class="report__body">
+            <p class="report__quote">"El botón de 'Confirmar reserva' se sintió lento, así que lo presioné dos veces. Ahora en la lista aparecen dos reservas idénticas para el mismo espacio y la misma hora."</p>
+            <p class="report__meta">Reportado por: Coordinador de convivencia</p>
+            <div class="mock" aria-hidden="true">
+              <div class="mock__bar"><span></span><span></span><span></span><p>agendapp.escuela.edu.co/mis-reservas</p></div>
+              <div class="mock__body mock__body--list">
+                <div class="mock__row">Laboratorio · 11:00–12:00</div>
+                <div class="mock__row mock__row--dup">Laboratorio · 11:00–12:00 <em>(duplicada)</em></div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <h3>Ejemplo resuelto</h3><table class="example-table">
+          <tbody>
+            <tr><th scope="row">Entrada</th><td><code>Sala de Cómputo, inicio 08:00, fin 07:30</code> (la hora de fin es anterior a la de inicio)</td></tr>
+            <tr><th scope="row">Resultado esperado</th><td>El sistema debería <strong>rechazar</strong> la reserva y avisar que la hora de fin no puede ser anterior a la de inicio.</td></tr>
+            <tr><th scope="row">Resultado obtenido</th><td>El sistema <strong>confirmó</strong> la reserva sin avisar nada.</td></tr>
+            <tr><th scope="row">Conclusión</th><td><span class="badge badge--fail">✘ Falla confirmada</span> — AgendApp no valida que la hora de fin sea posterior a la de inicio.</td></tr>
+          </tbody>
+        </table><h3>El ciclo de prueba y descarte</h3>
+        <p>Todo caso de prueba sigue el mismo ciclo de cuatro pasos. Lo vas a repetir tú en la siguiente etapa:</p>
+        <ol class="cycle">
+          <li><span class="cycle__num">1</span><strong>Diseñar</strong><p>Eliges una entrada concreta que pueda revelar el problema del reporte.</p></li>
+          <li><span class="cycle__num">2</span><strong>Ejecutar</strong><p>Corres el caso en el sistema real (o simulado) y observas qué hace.</p></li>
+          <li><span class="cycle__num">3</span><strong>Comparar</strong><p>Contrastas el resultado obtenido contra el resultado esperado.</p></li>
+          <li><span class="cycle__num">4</span><strong>Concluir</strong><p>Si no coinciden, confirmaste una falla; si coinciden, descartas esa hipótesis y pruebas otra entrada.</p></li>
+        </ol><details class="helpbox">
+          <summary>📘 Glosario: palabras clave de la ruta</summary>
+          <dl class="glossary">
+            <dt>Caso de prueba</dt><dd>Una entrada concreta más el resultado que se espera obtener al usarla.</dd>
+            <dt>Entrada</dt><dd>Los datos que le das al sistema para observar cómo reacciona.</dd>
+            <dt>Resultado esperado</dt><dd>Lo que el sistema <em>debería</em> hacer si funcionara correctamente.</dd>
+            <dt>Resultado obtenido</dt><dd>Lo que el sistema <em>realmente</em> hizo al ejecutar el caso.</dd>
+            <dt>Falla</dt><dd>Cuando el resultado obtenido no coincide con el esperado.</dd>
+            <dt>Hipótesis</dt><dd>Una explicación provisional sobre la causa probable de una falla.</dd>
+            <dt>Depuración</dt><dd>El proceso de encontrar la causa de una falla y corregirla.</dd>
+            <dt>Prueba y descarte</dt><dd>Método de ir probando posibles causas una por una hasta quedarte con la correcta.</dd>
+          </dl>
+        </details><h3>Verifica lo que entendiste</h3><fieldset class="quiz"><legend>¿Qué es el resultado esperado?</legend><label class="radio"><input type="radio" name="cq1" data-path="checks.cq1" value="a" data-correct="true" data-msg="Correcto: lo defines tú antes de ejecutar, y es lo que comparas con lo obtenido."> Lo que el sistema debería hacer si funcionara bien.</label><label class="radio"><input type="radio" name="cq1" data-path="checks.cq1" value="b" data-msg="Eso es el resultado obtenido. El esperado se define antes, como referencia."> Lo que el sistema hizo al ejecutar el caso.</label><div class="quiz__feedback" aria-live="polite"></div></fieldset><fieldset class="quiz"><legend>Un caso no revela ninguna falla. ¿Qué haces?</legend><label class="radio"><input type="radio" name="cq2" data-path="checks.cq2" value="a" data-msg="Un caso que pasa solo cubre esa entrada; otras podrían seguir fallando."> Concluyo que la app no tiene errores.</label><label class="radio"><input type="radio" name="cq2" data-path="checks.cq2" value="b" data-correct="true" data-msg="Correcto: es el ciclo de prueba y descarte."> Descarto esa hipótesis y pruebo otra entrada.</label><div class="quiz__feedback" aria-live="polite"></div></fieldset><div class="field"><label for="st-reflexion">✍️ ¿Cuál reporte te parece más grave y por qué?</label><textarea id="st-reflexion" rows="3" data-path="student.reflexion"></textarea></div><button class="btn btn--primary" data-goto="3">Ir a practicar →</button></section>
+<section id="step-3" class="screen" aria-labelledby="t3"><h2 id="t3">Etapa 3 · Desarrolla la actividad</h2><div class="callout"><p><strong>🎯 Aquí:</strong> pruebas AgendApp con tres casos, uno por reporte. Primero escribe tu predicción, luego ejecuta y compara.</p></div><p id="casosStatus" class="fine-print"></p>
+<ul class="plain-list" id="practiceChecklist"><li id="chk-c1"></li><li id="chk-c2"></li><li id="chk-c3"></li></ul>
+<p>Reservas ya registradas hoy:</p><ul class="seed-list"><li><code>Sala de Cómputo · 08:00–09:00 · Grupo 9B</code></li><li><code>Cancha · 10:00–11:00 · Grupo 8A</code></li></ul><!-- CASE 1 -->
+        <article class="case" id="case1" data-case="1">
+          <h3>Caso 1 — Reporte 1: Error de entrada</h3>
+          <p><strong>🎯 Tu misión:</strong> Lograr que AgendApp acepte una reserva con datos que no tienen sentido, como pasó con la docente de Tecnología.</p>
+          <details class="helpbox"><summary>💡 ¿Necesitas una pista?</summary><p>Piensa qué pasaría si alguien no sabe todavía a qué hora termina. Prueba dejar la «Hora de fin» vacía, o ponerla antes de la hora de inicio.</p></details>
+          <div class="case__grid">
+            <div class="field">
+              <label for="c1-sala">Sala</label>
+              <select id="c1-sala">
+                <option>Sala de Cómputo</option>
+                <option>Cancha</option>
+                <option>Laboratorio</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c1-inicio">Hora de inicio</label>
+              <input type="time" id="c1-inicio" value="14:00">
+            </div>
+            <div class="field">
+              <label for="c1-fin">Hora de fin <span class="field__hint">(prueba dejarla vacía o antes del inicio)</span></label>
+              <input type="time" id="c1-fin">
+            </div>
+          </div>
+          <div class="field">
+            <label for="c1-esperado">Resultado esperado (tu predicción)</label>
+            <textarea id="c1-esperado" rows="2" placeholder="¿Qué crees que debería hacer AgendApp con estos datos?"></textarea>
+          </div>
+          <button class="btn btn--run" data-run="1">Ejecutar caso 1</button>
+          <div class="result" id="c1-result" aria-live="polite"></div>
+        </article>
+
+        <!-- CASE 2 -->
+        <article class="case" id="case2" data-case="2">
+          <h3>Caso 2 — Reporte 2: Error de cálculo</h3>
+          <p><strong>🎯 Tu misión:</strong> Lograr que AgendApp rechace una reserva que debería ser válida, como le pasó al estudiante de 8.º.</p>
+          <details class="helpbox"><summary>💡 ¿Necesitas una pista?</summary><p>Mira las reservas que ya existen. Pide un espacio que esté libre, pero a la misma hora en que OTRO espacio está ocupado (por ejemplo, la Cancha de 08:00 a 09:00).</p></details>
+          <div class="case__grid">
+            <div class="field">
+              <label for="c2-sala">Sala a reservar</label>
+              <select id="c2-sala">
+                <option>Cancha</option>
+                <option>Sala de Cómputo</option>
+                <option>Laboratorio</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c2-inicio">Hora de inicio</label>
+              <input type="time" id="c2-inicio" value="08:00">
+            </div>
+            <div class="field">
+              <label for="c2-fin">Hora de fin</label>
+              <input type="time" id="c2-fin" value="09:00">
+            </div>
+          </div>
+          <div class="field">
+            <label for="c2-esperado">Resultado esperado (tu predicción)</label>
+            <textarea id="c2-esperado" rows="2" placeholder="Pista: prueba un horario que ya está ocupado, pero en una sala distinta."></textarea>
+          </div>
+          <button class="btn btn--run" data-run="2">Ejecutar caso 2</button>
+          <div class="result" id="c2-result" aria-live="polite"></div>
+        </article>
+
+        <!-- CASE 3 -->
+        <article class="case" id="case3" data-case="3">
+          <h3>Caso 3 — Reporte 3: Error de navegación</h3>
+          <p><strong>🎯 Tu misión:</strong> Lograr que AgendApp cree una reserva repetida, como si el coordinador hubiera hecho doble clic.</p>
+          <details class="helpbox"><summary>💡 ¿Necesitas una pista?</summary><p>Pulsa «Confirmar reserva» y después «Confirmar de nuevo» sin cambiar ningún dato.</p></details>
+          <div class="case__grid">
+            <div class="field">
+              <label for="c3-sala">Sala</label>
+              <select id="c3-sala">
+                <option>Laboratorio</option>
+                <option>Sala de Cómputo</option>
+                <option>Cancha</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c3-inicio">Hora de inicio</label>
+              <input type="time" id="c3-inicio" value="11:00">
+            </div>
+            <div class="field">
+              <label for="c3-fin">Hora de fin</label>
+              <input type="time" id="c3-fin" value="12:00">
+            </div>
+          </div>
+          <div class="field">
+            <label for="c3-esperado">Resultado esperado (tu predicción)</label>
+            <textarea id="c3-esperado" rows="2" placeholder="¿Qué debería pasar si presionas Confirmar dos veces con los mismos datos?"></textarea>
+          </div>
+          <button class="btn btn--run" data-run="3">Confirmar reserva</button>
+          <button class="btn btn--run btn--ghost" data-run="3">Confirmar de nuevo (simula el doble clic)</button>
+          <div class="result" id="c3-result" aria-live="polite"></div>
+        </article>
+
+        <button class="btn btn--primary" data-goto="4">Ir a entregar →</button></section>
+<section id="step-4" class="screen" aria-labelledby="t4"><h2 id="t4">Etapa 4 · Entrega tu evidencia</h2><div class="callout"><p><strong>🎯 Aquí:</strong> conviertes tu práctica en un informe. Al entregar se descarga un PDF que debes pasarle a tu docente.</p></div><h3>1. Tus datos</h3><div class="case__grid">
+<div class="field"><label for="st-nombre">Nombre completo *</label><input type="text" id="st-nombre" data-path="student.nombre" autocomplete="name"></div>
+<div class="field"><label for="st-documento">Documento *</label><input type="text" id="st-documento" data-path="student.documento" inputmode="numeric"></div>
+<div class="field"><label for="st-grado">Grado / curso *</label><input type="text" id="st-grado" data-path="student.grado" placeholder="Ej: 9.º B"></div>
+<div class="field"><label for="st-institucion">Institución</label><input type="text" id="st-institucion" data-path="student.institucion"></div>
+<div class="field"><label for="st-docente">Docente</label><input type="text" id="st-docente" data-path="student.docente"></div></div>
+<h3>2. Tu informe de pruebas</h3><article class="case"><h3>Informe del Caso 1</h3><div id="evsum1" class="fine-print"></div>
+<div class="field"><label for="r1-tipo">¿Qué tipo de falla es?</label><select id="r1-tipo" data-path="report.1.tipo"><option value="">Selecciona…</option><option>Error de entrada</option><option>Error de cálculo</option><option>Error de navegación</option></select></div>
+<div class="field"><label for="r1-causa">¿Cuál crees que es la causa? (explícala con tus palabras)</label><textarea id="r1-causa" rows="2" data-path="report.1.causa"></textarea></div></article><article class="case"><h3>Informe del Caso 2</h3><div id="evsum2" class="fine-print"></div>
+<div class="field"><label for="r2-tipo">¿Qué tipo de falla es?</label><select id="r2-tipo" data-path="report.2.tipo"><option value="">Selecciona…</option><option>Error de entrada</option><option>Error de cálculo</option><option>Error de navegación</option></select></div>
+<div class="field"><label for="r2-causa">¿Cuál crees que es la causa? (explícala con tus palabras)</label><textarea id="r2-causa" rows="2" data-path="report.2.causa"></textarea></div></article><article class="case"><h3>Informe del Caso 3</h3><div id="evsum3" class="fine-print"></div>
+<div class="field"><label for="r3-tipo">¿Qué tipo de falla es?</label><select id="r3-tipo" data-path="report.3.tipo"><option value="">Selecciona…</option><option>Error de entrada</option><option>Error de cálculo</option><option>Error de navegación</option></select></div>
+<div class="field"><label for="r3-causa">¿Cuál crees que es la causa? (explícala con tus palabras)</label><textarea id="r3-causa" rows="2" data-path="report.3.causa"></textarea></div></article><h3>3. Lista de verificación</h3><ul class="plain-list" id="deliverCheck"></ul>
+<p id="deliverStatus" class="fine-print" aria-live="polite"></p>
+<button class="btn btn--primary" id="deliverBtn">⬇ Entregar evidencia (PDF)</button> <button class="btn" id="reopenBtn" hidden>↩ Reabrir para mejorar</button></section>
+<section id="step-5" class="screen" aria-labelledby="t5"><h2 id="t5">Etapa 5 · Recibe retroalimentación</h2><div class="callout"><p><strong>🎯 Aquí:</strong> comparas tu informe con la causa esperada, comprendes tus errores y decides qué ajustar.</p></div><h3>Retroalimentación de tu evidencia</h3><article class="case"><h3>Caso 1 · Error de entrada</h3><div id="fbtext1"></div>
+<fieldset class="quiz"><legend>¿Qué tan cerca estuvo tu explicación de la causa esperada?</legend>
+<label class="radio"><input type="radio" name="fb1" data-path="fb.1" value="si"> Coincide</label>
+<label class="radio"><input type="radio" name="fb1" data-path="fb.1" value="parte"> Coincide en parte</label>
+<label class="radio"><input type="radio" name="fb1" data-path="fb.1" value="no"> No coincide</label></fieldset></article><article class="case"><h3>Caso 2 · Error de cálculo</h3><div id="fbtext2"></div>
+<fieldset class="quiz"><legend>¿Qué tan cerca estuvo tu explicación de la causa esperada?</legend>
+<label class="radio"><input type="radio" name="fb2" data-path="fb.2" value="si"> Coincide</label>
+<label class="radio"><input type="radio" name="fb2" data-path="fb.2" value="parte"> Coincide en parte</label>
+<label class="radio"><input type="radio" name="fb2" data-path="fb.2" value="no"> No coincide</label></fieldset></article><article class="case"><h3>Caso 3 · Error de navegación</h3><div id="fbtext3"></div>
+<fieldset class="quiz"><legend>¿Qué tan cerca estuvo tu explicación de la causa esperada?</legend>
+<label class="radio"><input type="radio" name="fb3" data-path="fb.3" value="si"> Coincide</label>
+<label class="radio"><input type="radio" name="fb3" data-path="fb.3" value="parte"> Coincide en parte</label>
+<label class="radio"><input type="radio" name="fb3" data-path="fb.3" value="no"> No coincide</label></fieldset></article>
+<div class="field"><label for="fb-ajuste">¿Qué vas a hacer diferente la próxima vez?</label><textarea id="fb-ajuste" rows="2" data-path="fb.ajuste"></textarea></div>
+<h3>Comprueba lo aprendido</h3><fieldset class="quiz" data-q="q4">
+          <legend><span class="quiz__num">1</span> En general, ¿qué es un caso de prueba?</legend>
+          <label class="radio"><input type="radio" data-path="quiz.q4" name="q4" value="a" data-correct="true"> Un conjunto de datos de entrada y un resultado esperado, usados para verificar si un sistema se comporta correctamente.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q4" name="q4" value="b"> Una lista de todos los errores que un programador ya corrigió.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q4" name="q4" value="c"> Un manual de usuario que explica cómo instalar el programa.</label>
+        </fieldset>
+
+        <fieldset class="quiz" data-q="q5">
+          <legend><span class="quiz__num">2</span> ¿Por qué es útil probar con datos "límite", como una reserva que empieza justo cuando otra termina?</legend>
+          <label class="radio"><input type="radio" data-path="quiz.q5" name="q5" value="a" data-correct="true"> Porque ahí suelen aparecer errores de comparación, como usar "menor que" en vez de "menor o igual que".</label>
+          <label class="radio"><input type="radio" data-path="quiz.q5" name="q5" value="b"> Porque el sistema siempre falla con números grandes.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q5" name="q5" value="c"> Porque los datos límite no sirven para probar software.</label>
+        </fieldset>
+
+        <fieldset class="quiz" data-q="q6">
+          <legend><span class="quiz__num">3</span> Ejecutas un caso y el resultado obtenido coincide con el esperado. ¿Qué conclusión es correcta?</legend>
+          <label class="radio"><input type="radio" data-path="quiz.q6" name="q6" value="a"> El sistema está libre de fallas y ya no hay que probar nada más.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q6" name="q6" value="b" data-correct="true"> Con esa entrada no hay falla: se descarta esa hipótesis y se prueba otra entrada distinta.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q6" name="q6" value="c"> El caso de prueba estuvo mal diseñado y debe borrarse.</label>
+        </fieldset>
+
+        <fieldset class="quiz" data-q="q7">
+          <legend><span class="quiz__num">4</span> ¿Por qué conviene escribir el resultado esperado <em>antes</em> de ejecutar el caso?</legend>
+          <label class="radio"><input type="radio" data-path="quiz.q7" name="q7" value="a"> Para que el sistema responda más rápido al ejecutarlo.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q7" name="q7" value="b"> Para que el resultado obtenido siempre coincida con el esperado.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q7" name="q7" value="c" data-correct="true"> Para no ajustar la predicción a lo que el sistema hizo y poder comparar con honestidad.</label>
+        </fieldset>
+
+        <fieldset class="quiz" data-q="q8">
+          <legend><span class="quiz__num">5</span> En el contexto del software, ¿qué es depurar?</legend>
+          <label class="radio"><input type="radio" data-path="quiz.q8" name="q8" value="a"> Borrar del sistema todas las reservas antiguas.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q8" name="q8" value="b" data-correct="true"> Encontrar la causa de una falla y corregirla.</label>
+          <label class="radio"><input type="radio" data-path="quiz.q8" name="q8" value="c"> Escribir el manual de usuario de la aplicación.</label>
+        </fieldset>
+
+        <button class="btn btn--run" id="quizBtn">Comprobar mis respuestas</button>
+<h3>Tu nivel de desempeño</h3><div class="score-panel" id="rubricBox"></div>
+<button class="btn" id="improveBtn">↩ Mejorar mi evidencia</button></section>
+<section id="step-6" class="screen" aria-labelledby="t6"><h2 id="t6">Etapa 6 · Cierra tu proceso</h2><div class="callout"><p><strong>🎉 Último paso:</strong> reflexionas sobre lo que aprendiste y descargas tu constancia.</p></div><div id="summaryBox" class="summary"></div>
+<div class="field"><label for="st-aprendizaje">¿Qué aprendiste? *</label><textarea id="st-aprendizaje" rows="3" data-path="student.aprendizaje"></textarea></div>
+<div class="field"><label for="st-dificultad">¿Qué fue lo más difícil?</label><textarea id="st-dificultad" rows="2" data-path="student.dificultad"></textarea></div>
+<div class="field"><label for="st-valoracion">¿Cómo valoras la ruta?</label><select id="st-valoracion" data-path="student.valoracion"><option value="">Selecciona</option><option>5 - Muy buena</option><option>4 - Buena</option><option>3 - Regular</option><option>2 - Mala</option><option>1 - Muy mala</option></select></div>
+<div class="field"><label for="st-comentario">Comentarios o sugerencias</label><textarea id="st-comentario" rows="2" data-path="student.comentario"></textarea></div>
+<button class="btn btn--primary" id="downloadBtn">⬇ Descargar mi constancia (PDF)</button>
+<p class="fine-print">El PDF se genera en tu navegador: no se envía ningún dato a internet.</p></section>
+</main></div>
+<p id="gateMsg" class="gate" role="status" aria-live="polite"></p>
+<footer class="nav-controls"><button class="btn" id="prevBtn">← Anterior</button><div class="nav-controls__progress" id="progressText"></div><button class="btn" id="nextBtn">Siguiente →</button></footer>
+<footer class="credits"><p class="credits__text">RED-89-S-19 · Ruta de aprendizaje de AgendApp Escolar — Elaborado por <strong>Héctor Cogollo Ríos</strong>, con apoyo técnico de <strong>Claude</strong> (Anthropic), y hecho en <strong>VScode</strong>.</p></footer>
+</div><script src="script.js"></script></body></html>
